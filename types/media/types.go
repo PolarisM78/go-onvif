@@ -3,9 +3,9 @@ package media
 import (
 	"encoding/xml"
 
-	"github.com/liyanhui1998/go-onvif/types/device"
-	"github.com/liyanhui1998/go-onvif/xsd"
-	"github.com/liyanhui1998/go-onvif/xsd/onvif"
+	"github.com/PolarisM78/go-onvif/types/device"
+	"github.com/PolarisM78/go-onvif/xsd"
+	"github.com/PolarisM78/go-onvif/xsd/onvif"
 )
 
 type Capabilities struct {

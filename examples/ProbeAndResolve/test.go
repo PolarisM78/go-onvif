@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/liyanhui1998/go-onvif"
+	"github.com/PolarisM78/go-onvif"
 )
 
 func main() {

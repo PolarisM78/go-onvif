@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/liyanhui1998/go-onvif"
-	"github.com/liyanhui1998/go-onvif/types/device"
-	"github.com/liyanhui1998/go-onvif/types/media"
+	"github.com/PolarisM78/go-onvif"
+	"github.com/PolarisM78/go-onvif/types/device"
+	"github.com/PolarisM78/go-onvif/types/media"
 )
 
 func readResponse(resp *http.Response) string {

@@ -1,25 +1,25 @@
 package event
 
 import (
-	"github.com/liyanhui1998/go-onvif/xsd"
+	"github.com/PolarisM78/go-onvif/xsd"
 )
 
-//GetServiceCapabilities action
+// GetServiceCapabilities action
 type GetServiceCapabilities struct {
 	XMLName string `xml:"tev:GetServiceCapabilities"`
 }
 
-//GetServiceCapabilitiesResponse type
+// GetServiceCapabilitiesResponse type
 type GetServiceCapabilitiesResponse struct {
 	Capabilities Capabilities
 }
 
-//SubscriptionPolicy action
+// SubscriptionPolicy action
 type SubscriptionPolicy struct { //tev http://www.onvif.org/ver10/events/wsdl
 	ChangedOnly xsd.Boolean `xml:"ChangedOnly,attr"`
 }
 
-//Subscribe action for subscribe event topic
+// Subscribe action for subscribe event topic
 type Subscribe struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	XMLName                struct{}              `xml:"wsnt:Subscribe"`
 	ConsumerReference      EndpointReferenceType `xml:"wsnt:ConsumerReference"`
@@ -28,35 +28,35 @@ type Subscribe struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	InitialTerminationTime TerminationTime       `xml:"wsnt:InitialTerminationTime"`
 }
 
-//SubscribeResponse message for subscribe event topic
+// SubscribeResponse message for subscribe event topic
 type SubscribeResponse struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	ConsumerReference EndpointReferenceType `xml:"ConsumerReference"`
 	CurrentTime       CurrentTime           `xml:"CurrentTime"`
 	TerminationTime   TerminationTime       `xml:"TerminationTime"`
 }
 
-//Renew action for refresh event topic subscription
+// Renew action for refresh event topic subscription
 type Renew struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	TerminationTime AbsoluteOrRelativeTimeType `xml:"wsnt:TerminationTime"`
 }
 
-//RenewResponse for Renew action
+// RenewResponse for Renew action
 type RenewResponse struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	TerminationTime TerminationTime `xml:"wsnt:TerminationTime"`
 	CurrentTime     CurrentTime     `xml:"wsnt:CurrentTime"`
 }
 
-//Unsubscribe action for Unsubscribe event topic
+// Unsubscribe action for Unsubscribe event topic
 type Unsubscribe struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 	XMLName string `xml:"http://docs.oasis-open.org/wsn/b-2 Unsubscribe"`
 }
 
-//UnsubscribeResponse message for Unsubscribe event topic
+// UnsubscribeResponse message for Unsubscribe event topic
 type UnsubscribeResponse struct { //http://docs.oasis-open.org/wsn/b-2.xsd
 }
 
-//CreatePullPointSubscription action
-//BUG(r) Bad AbsoluteOrRelativeTimeType type
+// CreatePullPointSubscription action
+// BUG(r) Bad AbsoluteOrRelativeTimeType type
 type CreatePullPointSubscription struct {
 	XMLName string `xml:"tev:CreatePullPointSubscription"`
 	// Filter                 FilterType                 `xml:"tev:Filter"`
@@ -64,19 +64,19 @@ type CreatePullPointSubscription struct {
 	// SubscriptionPolicy     SubscriptionPolicy         `xml:"wsnt:sSubscriptionPolicy"`
 }
 
-//CreatePullPointSubscriptionResponse action
+// CreatePullPointSubscriptionResponse action
 type CreatePullPointSubscriptionResponse struct {
 	SubscriptionReference EndpointReferenceType
 	CurrentTime           CurrentTime     `xml:"CurrentTime"`
 	TerminationTime       TerminationTime `xml:"TerminationTime"`
 }
 
-//GetEventProperties action
+// GetEventProperties action
 type GetEventProperties struct {
 	XMLName string `xml:"tev:GetEventProperties"`
 }
 
-//GetEventPropertiesResponse action
+// GetEventPropertiesResponse action
 type GetEventPropertiesResponse struct {
 	TopicNamespaceLocation          xsd.AnyURI
 	FixedTopicSet                   FixedTopicSet
@@ -89,42 +89,42 @@ type GetEventPropertiesResponse struct {
 
 //Port type PullPointSubscription
 
-//PullMessages Action
+// PullMessages Action
 type PullMessages struct { //xmlns="http://www.onvif.org/ver10/events/wsdl"
 	XMLName      string `xml:"tev:PullMessages"`
 	Timeout      string `xml:"tev:Timeout"`
 	MessageLimit int    `xml:"tev:MessageLimit"`
 }
 
-//PullMessagesResponse response type
+// PullMessagesResponse response type
 type PullMessagesResponse struct {
 	CurrentTime         CurrentTime         `xml:"CurrentTime"`
 	TerminationTime     TerminationTime     `xml:"TerminationTime"`
 	NotificationMessage NotificationMessage `xml:"NotificationMessage"`
 }
 
-//PullMessagesFaultResponse response type
+// PullMessagesFaultResponse response type
 type PullMessagesFaultResponse struct {
 	MaxTimeout      xsd.Duration
 	MaxMessageLimit xsd.Int
 }
 
-//Seek action
+// Seek action
 type Seek struct {
 	XMLName string       `xml:"tev:Seek"`
 	UtcTime xsd.DateTime `xml:"tev:UtcTime"`
 	Reverse xsd.Boolean  `xml:"tev:Reverse"`
 }
 
-//SeekResponse action
+// SeekResponse action
 type SeekResponse struct {
 }
 
-//SetSynchronizationPoint action
+// SetSynchronizationPoint action
 type SetSynchronizationPoint struct {
 	XMLName string `xml:"tev:SetSynchronizationPoint"`
 }
 
-//SetSynchronizationPointResponse action
+// SetSynchronizationPointResponse action
 type SetSynchronizationPointResponse struct {
 }

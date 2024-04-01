@@ -13,8 +13,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/liyanhui1998/go-onvif"
-	event "github.com/liyanhui1998/go-onvif/types/events"
+	"github.com/PolarisM78/go-onvif"
+	event "github.com/PolarisM78/go-onvif/types/events"
 )
 
 func main() {

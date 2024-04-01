@@ -12,8 +12,8 @@ package main
 import (
 	"log"
 
-	"github.com/liyanhui1998/go-onvif"
-	"github.com/liyanhui1998/go-onvif/types/device"
+	"github.com/PolarisM78/go-onvif"
+	"github.com/PolarisM78/go-onvif/types/device"
 )
 
 func main() {
