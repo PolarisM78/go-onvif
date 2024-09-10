@@ -161,6 +161,12 @@ type ContinuousMove2 struct {
 	Velocity     onvif.PTZSpeed       `xml:"tptz:Velocity"`
 }
 
+type ContinuousMove4 struct {
+	XMLName      string               `xml:"tptz:ContinuousMove"`
+	ProfileToken onvif.ReferenceToken `xml:"tptz:ProfileToken"`
+	Velocity     onvif.PTZSpeed2      `xml:"tptz:Velocity"`
+}
+
 type ContinuousMoveResponse struct {
 }
 
