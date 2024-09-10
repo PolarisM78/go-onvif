@@ -556,9 +556,16 @@ type Vector2D struct {
 	Space xsd.AnyURI `xml:"space,attr"`
 }
 
+type Vector2D2 struct {
+	X float64 `xml:"x,attr"`
+	Y float64 `xml:"y,attr"`
+}
 type Vector1D struct {
 	X     float64    `xml:"x,attr"`
 	Space xsd.AnyURI `xml:"space,attr"`
+}
+type Vector1D2 struct {
+	X float64 `xml:"x,attr"`
 }
 
 type PanTiltLimits struct {
