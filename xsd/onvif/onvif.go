@@ -551,7 +551,6 @@ type PTZSpeed struct {
 }
 type PTZSpeed2 struct {
 	PanTilt Vector2D2 `xml:"PanTilt"`
-	Zoom    Vector1D2 `xml:"Zoom"`
 }
 
 type Vector2D struct {
